@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majik Food - Product Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            color: #ff6347;
+        }
+
+        .product-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-card h2 {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .product-card p {
+            padding: 0 1rem;
+            color: #666;
+        }
+
+        .product-card .price {
+            font-size: 1.2rem;
+            color: #ff6347;
+            margin: 1rem 0;
+        }
+
+        .product-card button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            margin: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .product-card button:hover {
+            background-color: #e5533d;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Majik Food</h1>
+        <p>Delicious Meals Delivered to You</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="product-container">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x200?text=Spicy+Burger" alt="Spicy Burger">
+            <h2>Spicy Burger</h2>
+            <p>A juicy beef patty with spicy sauce, fresh lettuce, and tomatoes.</p>
+            <div class="price">$8.99</div>
+            <button>Order Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x200?text=Margherita+Pizza" alt="Margherita Pizza">
+            <h2>Margherita Pizza</h2>
+            <p>Classic pizza with fresh basil, mozzarella, and tomato sauce.</p>
+            <div class="price">$12.99</div>
+            <button>Order Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x200?text=Caesar+Salad" alt="Caesar Salad">
+            <h2>Caesar Salad</h2>
+            <p>Crisp romaine lettuce with creamy Caesar dressing and croutons.</p>
+            <div class="price">$6.99</div>
+            <button>Order Now</button>
+        </div>
+        
+    </div>
+    <footer>
+        <p>Copyright © 2025 Majik Food. All rights reserved.</p>
+    </footer>
+</body>
+</html>
