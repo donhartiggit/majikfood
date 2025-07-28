@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Majik Food - Product Page</title>
+    <title>Majik Food Probiotic Yoghurt & Dairy Products</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -19,15 +19,9 @@
         }
 
         header {
-            background-color: #ff6347;
-            color: white;
+            color: black;
             text-align: center;
             padding: 1.5rem;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
         }
 
         nav {
@@ -70,8 +64,8 @@
         }
 
         .product-card img {
-            width: 100%;
-            height: 200px;
+            width: 300px;
+            height: 300px;
             object-fit: cover;
         }
 
@@ -91,18 +85,18 @@
             margin: 1rem 0;
         }
 
-        .product-card button {
+        .product-card a.button {
+            display: inline-block;
             background-color: #ff6347;
             color: white;
-            border: none;
+            text-decoration: none;
             padding: 0.75rem 1.5rem;
             margin: 1rem;
             border-radius: 5px;
-            cursor: pointer;
             font-size: 1rem;
         }
 
-        .product-card button:hover {
+        .product-card a.button:hover {
             background-color: #e5533d;
         }
 
@@ -112,6 +106,58 @@
             text-align: center;
             padding: 1rem;
             margin-top: 2rem;
+        }
+
+        /* Pop-up styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup:target {
+            display: flex;
+        }
+
+        .popup-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            position: relative;
+        }
+
+        .popup-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .popup-content p {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .popup-content a.close {
+            display: inline-block;
+            background-color: #ff6347;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+
+        .popup-content a.close:hover {
+            background-color: #e5533d;
         }
 
         @media (max-width: 768px) {
@@ -132,44 +178,133 @@
 </head>
 <body>
     <header>
-        <h1>Majik Food</h1>
-        <p>Delicious Meals Delivered to You</p>
+        <img src="Majikfood_Logo_Transparent.png" alt="Majik Food Logo" style="width: 100%; height: auto;">
+        <u><h1>Contact "Carina"</h1></u>
+        <h2>Cell / Whatsapp: <span style="color:red">(+27) 072 673 5800</span></h2>
+        <h2>E-mail: <span style="color:red">majikfood@gmail.com</span></h2>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+
+   <hr>
 
     <div class="product-container">
         <div class="product-card">
-            <img src="https://via.placeholder.com/300x200?text=Spicy+Burger" alt="Spicy Burger">
-            <h2>Spicy Burger</h2>
-            <p>A juicy beef patty with spicy sauce, fresh lettuce, and tomatoes.</p>
-            <div class="price">$8.99</div>
-            <button>Order Now</button>
+            <img src="Probiotic_Yoghurt_1lt.jpg" alt="Natural Probiotic Yoghurt">
+            <h2>Natural Probiotic Yoghurt (1 L)</h2>
+            <p>All-natural probiotic yoghurt made from farm milk sourced in the Garden Route.</p>
+            <div class="price">R 55.00<br>(+ R 30 deposit on jar = R 85.00)</div>
+            <a href="#popup" class="button">Order Now</a>
         </div>
 
         <div class="product-card">
-            <img src="https://via.placeholder.com/300x200?text=Margherita+Pizza" alt="Margherita Pizza">
-            <h2>Margherita Pizza</h2>
-            <p>Classic pizza with fresh basil, mozzarella, and tomato sauce.</p>
-            <div class="price">$12.99</div>
-            <button>Order Now</button>
+            <img src="Probiotic_Cream_Cheese_250g.jpg" alt="Natural Probiotic Cream Cheese">
+            <h2>Natural Probiotic Cream Cheese (250 g)</h2>
+            <p>Creamy probiotic cream cheese made with fresh ingredients from the Garden Route.</p>
+            <div class="price">R 55.00</div>
+            <a href="#popup" class="button">Order Now</a>
         </div>
 
         <div class="product-card">
-            <img src="https://via.placeholder.com/300x200?text=Caesar+Salad" alt="Caesar Salad">
-            <h2>Caesar Salad</h2>
-            <p>Crisp romaine lettuce with creamy Caesar dressing and croutons.</p>
-            <div class="price">$6.99</div>
-            <button>Order Now</button>
+            <img src="Butter_250g.png" alt="Majikfood Home-Made Butter 250g">
+            <h2>Butter (250g)</h2>
+            <p>Rich, home-made butter crafted with care from local dairy.</p>
+            <div class="price">$4.99</div>
+            <a href="#popup" class="button">Order Now</a>
         </div>
+
+        <div class="product-card">
+            <img src="Butter_500g.png" alt="Majikfood Home-Made Butter 500g">
+            <h2>Butter (500g)</h2>
+            <p>Rich, home-made butter crafted with care from local dairy.</p>
+            <div class="price">$7.99</div>
+            <a href="#popup" class="button">Order Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="Organic Goat Milk Paneer (100g).jpg" alt="Organic Goat Milk Paneer">
+            <h2>Organic Goat Milk Paneer (100g)</h2>
+            <p>Fresh, organic goat milk paneer, perfect for culinary creations.</p>
+            <div class="price">$3.99</div>
+            <a href="#popup" class="button">Order Now</a>
+        </div>
+ 
+ <div class="product-card">
+            <img src="Natural Probiotic Goat Yoghurt (1lt).jpg" alt="Natural Probiotic Goat Yoghurt">
+            <h2>Natural Probiotic Goat Yoghurt (1 L, glass container)</h2>
+            <p>Fresh, home-made, organic goat milk yoghurt.</p>
+            <div class="price">R 68.00<br>+ R 30 deposit on jar = R 98.00</div>
+            <a href="#popup" class="button">Order Now</a>
+        </div>
+ 
+<div class="product-card">
+            <img src="Natural Goat Cream Cheese (200g).jpg" alt="Natural Goat Cream Cheese">
+            <h2>Natural Goat's Cream Cheese (200 g)</h2>
+            <p>Natural goat's cream cheese, perfect for culinary creations.</p>
+            <div class="price">$3.99</div>
+            <a href="#popup" class="button">Order Now</a>
+        </div>
+
+<div class="product-card">
+            <img src="Vegan Cheese (400g).jpg" alt="Vegan Cheese">
+            <h2>Natural, home-made vegan cheese.</p>
+            <div class="price">$3.99</div>
+            <a href="#popup" class="button">Order Now</a>
+        </div>
+
+<div class="product-card">
+            <img src="Free Range Eggs (1doz).jpg" alt="Natural Goat Cream Cheese">
+            <h2>Free range eggs (1 doz)</h2>
+            <p>Fresh, free-range eggs from the Garden Route.</p>
+            <div class="price">$3.99</div>
+            <a href="#popup" class="button">Order Now</a>
+        </div>        
+
+<div class="product-card">
+            <img src="Honeychild Natural Honey (500g).jpg" alt="Honeychild Natural Honey">
+            <h2>"Honeychild" Natural Honey (500 g)</h2>
+            <p>Fully natural, Award-winning "Honeychild" honey from the Garden Route.</p>
+            <div class="price">$3.99</div>
+            <a href="#popup" class="button">Order Now</a>
+        </div>
+
+<div class="product-card">
+            <img src="Organic Vegetables.jpg" alt="Organic vegetables from the Garden Route">
+            <h2>Organic Vegetables</h2>
+            <p>Fresh, organic vegetables from the Garden Route.</p>
+            <div class="price">Subject to availability.</div>
+            <a href="#popup" class="button">Order Now</a>
+        </div>        
+
+<div class="product-card">
+            <img src="Organic Carrots (20-25 rand bunch).jpg" alt="Organic carrots from the Garden Route">
+            <h2>Organic Carrots</h2>
+            <p>Fresh, organic carrots from the Garden Route.</p>
+            <div class="price">Subject to availability.</div>
+            <a href="#popup" class="button">Order Now</a>
+        </div>
+
+<div class="product-card">
+            <img src="Organic Beetroot (yellow) (R20-R25_bunch).jpg" alt="Organic beetroot (yellow) from the Garden Route">
+            <h2>Organic Beetroot (yellow)</h2>
+            <p>Fresh, organic vegetables from the Garden Route.</p>
+            <div class="price">Subject to availability.</div>
+            <a href="#popup" class="button">Order Now</a>
+        </div>        
+        
         
     </div>
+
+    <!-- Single Pop-up modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <u><h2>Contact to Order</h2></u>
+            <h3>Contact: <span style="color:red">"Carina"</b></h3><br>
+            <p>Cell / Whatsapp: <span style="color:red">(+27) 072 673 5800</span></p>
+            <p>E-mail: <span style="color:red">majikfood@gmail.com</span></p>
+            <img src="Majikfood Whatsapp Group.PNG" alt="Majikfood Yoghurt Whatsapp">
+            <a href="#" class="close">Close</a>
+        </div>
+    </div>
+
     <footer>
         <p>Copyright © 2025 Majik Food. All rights reserved.</p>
     </footer>
